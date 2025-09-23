@@ -38,8 +38,8 @@ function createNewVehicle(foto, nombre, marca, modelo, kilometraje, precio) {
 
     // Marca del vehículo
     const marcaVehicle = document.createElement("h4");
-    marcaVehicle.classList.add("card-subtitle", "text-muted");
-    marcaVehicle.textContent = marca;
+    marcaVehicle.classList.add("card-subtitle");
+    marcaVehicle.textContent = "Marca: " + marca;
 
     // Modelo del vehículo
     const modeloVehicle = document.createElement("h4");
@@ -165,7 +165,7 @@ function eventsToCard(containerCard) {
                 <img src="${foto}" class="img-carrito" alt="Foto vehículo">
                 <div class="card-body p-2">
                     <h5 class="card-title">${nombre}</h5>
-                    <h6 class="card-subtitle mb-1 text-muted">${marca}</h6>
+                    <h6 class="card-subtitle mb-1 ">${marca}</h6>
                     <p class="card-text mb-1">${modelo}</p>
                     <p class="card-text mb-1">${kilometraje}</p>
                     <h5 class="text-success mb-2">${precio}</h5>
@@ -190,7 +190,7 @@ function eventsToCard(containerCard) {
         actualizarTotal();
 
         // Mensaje de confirmación
-        alert(`Has agregado el carro ${marca} ${nombre} al carrito por ${precio}`);
+        alert(`Has agregado el carro ${nombre} al carrito por ${precio}`);
     });
 }
 
