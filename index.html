@@ -7,6 +7,7 @@
     <title>Vehiculos - DOM</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -21,37 +22,37 @@
                     <!-- Foto (URL) -->
                     <div class="mb-3">
                         <label for="foto" class="form-label">Foto (URL)</label>
-                        <input id="foto" type="url" class="form-control" placeholder="https://ejemplo.com/auto.jpg" >
+                        <input id="foto" type="url" class="form-control" placeholder="https://ejemplo.com/auto.jpg">
                     </div>
 
                     <!-- Nombre -->
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
-                        <input id="nombre" type="text" class="form-control" placeholder="Ej: Corolla" >
+                        <input id="nombre" type="text" class="form-control" placeholder="Ej: Corolla">
                     </div>
 
                     <!-- Marca -->
                     <div class="mb-3">
                         <label for="marca" class="form-label">Marca</label>
-                        <input id="marca" type="text" class="form-control" placeholder="Ej: Toyota" >
+                        <input id="marca" type="text" class="form-control" placeholder="Ej: Toyota">
                     </div>
 
                     <!-- Modelo -->
                     <div class="mb-3">
                         <label for="modelo" class="form-label">Modelo</label>
-                        <input id="modelo" type="text" class="form-control" placeholder="Ej: 2021" >
+                        <input id="modelo" type="text" class="form-control" placeholder="Ej: 2021">
                     </div>
 
                     <!-- Kilometraje -->
                     <div class="mb-3">
                         <label for="kilometraje" class="form-label">Kilometraje</label>
-                        <input id="kilometraje" type="number" class="form-control" placeholder="Ej: 35000" >
+                        <input id="kilometraje" type="number" class="form-control" placeholder="Ej: 35000">
                     </div>
 
                     <!-- Precio -->
                     <div class="mb-3">
                         <label for="precio" class="form-label">Precio ($)</label>
-                        <input id="precio" type="number" class="form-control" placeholder="Ej: 50000000" >
+                        <input id="precio" type="number" class="form-control" placeholder="Ej: 50000000">
                     </div>
 
                     <button type="submit" class="btn btn-primary" id="buttonCreateVehicle">Agregar Vehículo</button>
@@ -82,9 +83,40 @@
                     </div> -->
                     <!-- Aquí se irán agregando las demás tarjetas dinámicamente con JS -->
                 </div>
+
             </div>
         </div>
+
+
+
+
     </section>
+
+    <div class="shop">
+
+        <!-- Botón de la bolsa de compras -->
+        <button type="button" id="toggle-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+        <!-- Panel lateral -->
+        <div id="panel-lateral">
+
+            <h2>Carrito</h2>
+            
+
+            <div class="total-container mt-3 text-end">
+                <h4>Total: <span id="total-carrito">$0</span></h4>
+            </div>
+
+            <div class="cont-products"></div>
+        </div>
+
+    </div>
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
